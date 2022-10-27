@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Averia+Serif+Libre&family=La+Belle+Aurore&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+h1{
+    font-family: 'La Belle Aurore', cursive;
+    font-size: clamp(2.75rem, 1rem + 4vw, 4rem);
+}
+
+p{
+    font-family: 'Averia Serif Libre', cursive;
+}
+
+.vid-flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: aliceblue;
+    background-color: rgba(0, 0, 0, 0.327);
+    position: relative;
+    overflow: hidden;
+    min-height: 100vh;
+}
+
+.vid-flex video{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-height: 100%;
+    min-width: 100%;
+    z-index: -1;
+    aspect-ratio: 1 / 1;
+}
+
+.player-flex{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.player-flex div{
+    padding: .25rem 0;
+}
