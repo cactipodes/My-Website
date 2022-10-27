@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Poppins&display=swap');
+
+body{
+    font-family: 'Lato', sans-serif;
+    margin: 0;
+}
+
+h1{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+}
+
+header{
+    padding: 1rem;
+    padding-bottom: 5rem;
+    background: linear-gradient(rgba(50, 50, 50, .5), rgba(50, 50, 50, .5)), url(images/top08.jpg);
+    text-align: center;
+    color: #fff;
+}
+
+.site-nav{
+    background-color: rgba(125, 151, 189, .75);
+}
+
+.site-nav li{
+    display: inline-block;
+    margin: .25rem;
+}
+.site-nav a{
+    color: #fff;
+}
+
+h2{
+    background: #fff;
+    padding: .5rem;
+    margin: .5rem;
+}
+
+.full-background{
+    background: #edf5ff;
+}
+
+section{
+    padding: 1rem;
+}
+
+.weather-sect{
+    padding: 1rem;
+    border-style: solid;
+    border-width: medium;
+    border-color: #28313D;
+    margin: 2rem;
+}
+
+.location-sect{
+    padding: 1rem;
+    border-style: solid;
+    border-width: medium;
+    border-color: #455469;
+    margin: 2rem;
+}
+
+.winds-sect{
+    padding: 1rem;
+    border-style: solid;
+    border-width: medium;
+    border-color: #596C87;
+    margin: 2rem;
+}
+
+.snow-sect{
+    padding: 1rem;
+    border-style: solid;
+    border-width: medium;
+    border-color: #7D97BD;
+    margin: 2rem;
+}
+
+.tourist-sect{
+    padding: 1rem;
+    border-style: solid;
+    border-width: medium;
+    border-color: #99BAE8;
+    margin: 2rem;
+}
+
+footer{
+    padding: 2rem;
+    background-color: rgba(50, 50, 50, .5);
+    color: #fff;
+}
+
+footer a{
+    color: #fff;
+}
+
+/*
+*-Add Google web Fonts (find ones that are different than what you used for Bubacan) - Time 2:30
+*--Create a body style rule with one of your chosen fonts - Time 10:10
+*--Create an h1 rule for your other font
+
+*-Style the body selector
+*--Remove the extra space - Time 14:20 (remember to also set the margin to 0 in the h1 selector)
+*--Change the background color of the page to a light blue using a hexadecimal number - Time 21:00
+
+*-Add padding to all of the text so it doesn't butt up to the edge of the browser - Time 19:20
+
+*-Add a class to a section tag for styling (use a descriptive class name):
+*--Add a background color using a hexadecimal number - Time 21:00
+
+*-Style the following tags without adding a class. In the video, a class is added to the header and footer tags, but you are going to style only the tag which means there is no period and made-up class name (ex: See the body rule).
+--Style the <header> tag
+*---Change the background color with RGBa at 50% opacity - Time 25:10
+--Style the <footer> tag
+*---Change the background color with RGBa at 50% opacity - Time 25:10
+*---Change the font color with RGB - Time 32:05
+
+-Nav element
+*--Add a nav tag and links (3 minimum links) to the top of the web page using a list as shown in the Bubacan video example. Time :50
+*--Add a class and style (use .site-nav for the class and style as shown in the video) Time 33:55
+*---Style the background color
+*---Line links up horizontally
+*S---Change the link colors 
+*/

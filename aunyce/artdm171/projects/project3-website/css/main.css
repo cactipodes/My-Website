@@ -1,0 +1,355 @@
+@import url('https://fonts.googleapis.com/css2?family=Dynalight&family=Josefin+Sans:wght@300;400;500;600&display=swap');
+
+/*----------------------all pages------------------*/
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #232A23;
+    color: #FFF8EA;
+    font-family: 'Josefin Sans', sans-serif;
+    margin: 0;
+}
+
+header{
+    padding-left: 1rem;
+    
+    margin:1 rem;
+    min-height: 25rem;
+}
+
+.logo{
+    position: absolute;
+}
+
+
+h1{
+    font-family: 'Dynalight', cursive;
+    color: #FFF8EA;
+    font-size: 4rem;
+    font-weight: 100;
+    margin: 0;
+    padding-left: 1rem;
+}
+
+main{
+    padding: 1rem;
+}
+
+article{
+    border: 3px solid #DBA323;
+    padding: 1rem;
+}
+
+h2{
+    font-size: 2rem;
+    margin: 0;
+    padding: 1rem;
+}
+
+@media screen and (min-width: 600px){
+    h1{
+        padding-top: 7rem;
+    }
+}
+
+/*---------------nav--------------------------*/
+
+nav ul{
+
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    list-style-type: none;
+}
+
+nav li{
+    padding: 5px;
+    text-align: right;
+}
+
+nav a{
+    color: #DBA323;
+    font-size: 1.1rem;
+}
+
+@media screen and (max-width: 600px){
+    nav ul{
+        flex-direction: column;
+        
+
+    }
+}
+
+/*-------------home page-----------------*/
+.h1-image{
+    background-image:  url("../images/image-3-cropped.png");
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+    padding: 1rem;
+}
+    /*about page figure too*/
+figure{
+    margin: 0;
+    padding: 1rem;
+}
+
+
+@media screen and (min-width: 700px){
+    h2{
+        padding-left: inherit;
+    }
+
+    .s-intro{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+    }
+
+    .s-sect{
+        width: 33%;
+    }
+}
+
+/*------------------------About Page--------------------------------*/
+
+.h2-image{
+    background-image:  url("../images/image-5-cropped.png");
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+    padding: 1rem;
+}
+
+/*-----------------------Products Page-------------------------*/
+
+.h3-image{
+    background-image:  url("../images/image-6-cropped.png");
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+    padding: 1rem;
+}
+
+.c-name{
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.items{
+    margin:0;
+}
+
+.cacti-item{
+    padding-bottom: 2rem;
+}
+
+.cacti-item td img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 75%;
+}
+
+.products-arti{
+    padding-bottom: 15%;
+}
+
+@media (min-width: 600px){
+    .items{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: stretch;
+    }
+
+ 
+    .cacti-item td img{
+        width: 100%;
+    }
+}
+
+/*----------------------------forms------------------------------*/
+.h4-image{
+    background-image:  url("../images/image-1-cropped.png");
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+    padding: 1rem;
+}
+
+input[type=text], input[type=email]{
+    padding: 4px 5px;
+}
+
+input[type=file] accept{
+    background-color: #DBA323;
+    color:#232A23;
+}
+
+input, textarea{
+    display:block;
+    margin: .25rem 0;
+    padding-bottom: .5rem;
+    width: 100%;
+}
+
+textarea{
+    height: 10rem;
+    resize: none;
+}
+
+::placeholder{
+    color: #DBA323;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+button{
+    background-color: #DBA323;
+    border: none;
+    color:#232A23;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 500;
+    padding: 4px 0;
+    width: 6rem;
+
+    transition-duration: 0.2s;
+}
+
+button:hover{
+    color:#FFF8EA;
+}
+
+/*---------------------------Contact Page-------------------------*/
+
+.contact-arti{
+    padding-bottom: 10%;
+}
+
+p{
+    padding: 1rem;
+}
+.contact-form{
+    padding: 1rem;
+}
+
+.contact-img{
+    display: block;
+    padding: 1rem 0 0 0;
+    margin-right: auto;
+    margin-left: auto;
+    width: 75%;
+}
+
+@media (min-width:550px){
+    
+    .contact-form{
+        display: flex;
+        justify-content:space-between;
+        padding: 1rem;
+    }
+
+    .inside-contact{
+        width: 47%;
+    }
+
+}
+
+@media (max-width:900px){
+
+    .contact-img{
+        width: 100%;
+    }
+
+}
+
+/*------------------------Reviews Page---------------------------*/
+
+.h5-image{
+    background-image:  url("../images/image-2-cropped.png");
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+    padding: 1rem;
+}
+
+.check-rating{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+input[type=radio]{
+    margin: 0;
+    width: 20px;
+}
+
+.review-form{
+    padding: 1rem;
+}
+
+.rev-table{
+    border-collapse: collapse;
+    border: 2px solid #DBA323;
+    margin: 1rem;
+}
+
+.rev-table th{
+    padding: 0;
+    text-align: center;
+}
+
+.rating{
+    text-align: center;
+    width: 12%;
+}
+
+.see-row{
+    border-bottom: 2px solid #DBA323;
+}
+
+th{
+    border-bottom: 2px solid #DBA323;
+}
+
+
+.title{
+    font-weight: 500;
+}
+
+@media (max-width: 670px){
+    .rev-text{
+        padding: 1rem 0;
+        
+    }
+}
+
+@media (min-width: 700px){
+    .rev-page{
+        display: flex;
+        justify-content:space-evenly;
+    }
+
+    .review-form{
+        width: 47%;
+    }
+
+    .rev-table{
+        margin:0;
+        width: 47%;
+    }
+}
+
+
+/*----------------------------footer----------------------------*/
+
+footer{
+    padding: 1rem;
+    text-align: center;
+}
+
+

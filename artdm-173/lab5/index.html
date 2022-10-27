@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"  type="text/css" href="responsive-images.css">
+    <title>Lab 5:Responsive Images</title>
+</head>
+<body>
+    <header>
+        <h1>Get Up, Travel</h1>
+        <p>*This is a demo page exploring responsive images. <br>Hover to see more information.</p>
+    </header>
+
+    <main>
+        <div class="grid">
+     
+            <div class="img-1 child">
+                <div class="popup-title">
+                    <p>This is a demo of a div tag with a background-image, background-position, and background-size.</p>
+                </div>
+            </div>
+
+            <div class="img-2 child">
+                <img src="images/second.jpg">
+
+                <div class="popup-title">
+                    <p>This is a demo of an img tag using an object-fit property.</p>
+                </div>
+            </div>
+
+            <div class="img-3 child">
+                <img src="images/third.jpg">
+
+                <div class="popup-title">
+                    <p>This is a demo of an img tag using an object-fit property.</p>
+                </div>
+            </div>
+
+            <div class="img-4 child">
+                <img src="images/fourth.jpg">
+
+                <div class="popup-title">
+                    <p>This is a demo of an img tag using an object-fit property.</p>
+                </div>
+            </div>
+                
+            <div class="img-5 child">
+                <img srcset="images/fifth-small.jpg 400w, images/fifth-med.jpg  800w"
+                    src="images/fifth-small.jpg">
+
+                <div class="popup-title">
+                    <p>This is a demo of an img tag using the srcset and sizes attributes.</p>
+                </div>
+            </div>
+
+            <div class="img-6 child">
+                <img srcset="images/sixth-small.jpg 600w, images/sixth-med.jpg  900w"
+                    src="images/sixth-small.jpg">
+
+                <div class="popup-title">
+                    <p>This is a demo of an img tag using the srcset and sizes attributes.</p>
+                </div>
+            </div>
+
+            <div class="img-7 child">
+                <picture>
+                    <source
+                        media="(orientation: portrait)"
+                        srcset="images/seventh-vertical.jpg 630w">
+
+                    <source
+                        media="(orientation: lanscape)"
+                        srcset="images/seventh-horizontal.jpg">
+
+                    <img src="images/seventh-horizontal.jpg">
+                </picture>
+
+                <div class="popup-title">
+                    <p>This is a demo of a picture and source tags used to create a responsive image that changes orientation.</p>
+                </div>
+            </div>
+
+            <div class="img-8">
+                <img src="images/eight-svg.svg" alt="">
+
+                <div class="popup-title">
+                    <p>This is a demo of an img tag with a scaleable SVG image.</p>
+                </div>
+            </div>
+ 
+        </div>    
+    </main>
+
+    <footer>
+        <p>This is a demo page made by Aunyce Ocegueda 2022.</p>
+    </footer>
+</body>
+</html>
+
+<!--
+NOTE: Please also add descriptive headings above each of your additions!!!!
+
+1) Responsive background image using these properties:
+
+background-image
+background-position
+background-size
+Use a media query to alter the position of the bg image to suit different browser size/shape
+
+2) Add another example <img> using another object-fit property such as "cover"
+
+3) Add another example <img> using the srcset and sizes attributes to create a responsive image
+
+4) Add an example using picture and source tags to create a responsive image that changes orientation
+
+5) Add a scaleable SVG image to the page
+-->

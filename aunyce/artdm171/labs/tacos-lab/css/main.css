@@ -1,0 +1,117 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Changa+One&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+
+/*-----------------------global stuff-------------------------*/
+
+main{
+    margin: 5%;
+}
+
+
+
+.top-text{
+    text-align: center;
+}
+
+body{
+    background-image: url(../images/tacotile.gif);
+    font-family: 'Ubuntu', sans-serif;
+    margin: 0;
+}
+
+h1{
+    font-family: 'Changa One', cursive;
+    font-size: 50px;
+}
+
+h2{
+    font-family: 'Changa One', cursive;
+    font-size: 35px;
+    color: #CC2020;
+}
+
+h3{
+    font-family: 'Changa One', cursive;
+    font-size: 25px;
+}
+
+
+
+/*-----------------------Nav stuff-------------------------*/
+
+nav{
+    background-color: #30241E;
+    padding: 5px 0;
+    
+}
+
+nav ul{
+    align-self: center;
+    display: flex;
+    flex-direction: column-reverse;
+    list-style-type: none;
+    margin: 0;
+    padding:0;
+}
+
+nav li{
+    padding: 5px;
+    text-align: center;
+}
+
+nav a{
+    color:#DACCA8;
+}
+
+@media screen and (min-width: 600px){
+    nav ul{
+        flex-direction: row-reverse;
+        justify-content: space-evenly;
+        padding: 0;
+    }
+}
+
+/*-----------------------Header stuff-------------------------*/
+header{
+    background-color:#2E241F;
+    background-image: url(../images/home-heading.jpg);
+    background-position: center top;
+    background-size: cover;
+    height: 200px;
+    padding: 5%;
+}
+
+/*-----------------------Pages-------------------------*/
+.taco-child{
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 20px;
+    padding: 5%;
+    margin-bottom: 2%;
+}
+
+@media screen and (min-width: 600px){
+    .taco-parent{
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .taco-child{
+        width: 32%;
+    }
+}
+
+/*-----------------------Footer-------------------------*/
+footer{
+    background-color: #30241E;
+    color: #DACCA8;
+    height: 200px;
+    padding: 2%;
+    text-align: center;
+
+}

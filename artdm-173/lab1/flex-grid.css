@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass&family=Proza+Libre:wght@500;600&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    background-color: rgb(133,151,139);
+
+}
+
+/******************header*******************/
+
+
+.flex-container{
+    display: flex;
+    background-color: rgb(37, 34, 13);
+    padding-bottom: 5px;
+}
+
+h1{
+    margin: auto;
+    color: rgb(206, 195, 180);
+    padding: 0 1rem;
+    font-family: 'Proza Libre', sans-serif;
+    font-size: clamp(1.5rem, 5vw, 2.5rem);/* vlaue to wrk within a range*/
+    
+}
+
+.logo{
+    width: 125px;
+}
+
+/*******************Nav***********************/
+
+nav{
+    background-color: rgb(109, 88, 49);
+    padding: 1rem 0;
+}
+
+nav ul{
+    display: flex;
+    justify-content: space-around;
+    padding: 0;
+    margin: 0;
+}
+
+nav li{
+    list-style: none;
+}
+
+nav a{
+    color: rgb(232, 213, 165);
+}
+
+a:link{
+    text-decoration: none;
+    font-family: 'Overpass', sans-serif;
+}
+
+a:hover{
+    color: rgba(230, 189, 27, 0.921);
+}
+
+/********************Body*******************/
+
+main{
+    padding-bottom: 5px;
+    height: fit-content;
+}
+
+h2{
+    font-family: 'Proza Libre', sans-serif;
+}
+
+p{
+    font-family: 'Overpass', sans-serif;
+}
+
+.grid-container{
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;/* or repeat(4, 1fr)
+/*  grid-template-rows:  1fr 1fr 1fr 1fr; Not sure why I don't need this now*/
+    grid-gap: 5px;
+}
+
+img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.mid-row{
+    grid-row-end: span 2;
+}
+
+.grid-photo6{
+    grid-column-end: span 2;
+}
+
+/* I needed this for the layout to work before I added text
+@media screen and (min-width: 600px){
+
+    .grid-container{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+    }
+
+    .grid-photo5{
+        grid-row-start: span 1;
+        grid-column-end: span 1;
+    }
+
+    .grid-photo6{
+        grid-row-start: span 1;
+        grid-column-end: span 2;
+    }
+
+    .grid-photo7{
+        grid-row-start: span 1;
+        grid-column-end: span 1;
+    }
+}*/

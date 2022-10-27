@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@200&family=Sora:wght@200&display=swap');
+
+body{
+    background-color: #F2FcFF;
+}
+
+.top-header{
+    background-color: #184D7A;
+    padding: 4rem 2rem 1rem 2rem;
+}
+
+h1{
+    font-family: 'Sora', sans-serif;
+    font-size: 2.75rem;
+    margin: 0;
+    text-align: left;
+    color: #FFF;
+}
+
+.usfw-logo{
+    display: inline-block;
+    margin: 0;
+    position: absolute;
+    right: 2rem;
+    top: 1rem;   
+}
+
+.nav-bar{
+    background-color: #FFCB61;
+    padding: 0;
+    margin-top:4rem;
+    margin-bottom: 1rem;
+}
+
+.nav-bar li{
+    border-right-color: #f2fcff;
+    border-right-style: solid;
+    border-right-width: 2px;
+    display: inline-block;
+}
+
+.nav-bar a{
+    color:rgb(26, 23, 23);
+}
+
+body{
+    font-family: 'Lexend Deca', sans-serif;
+    font-weight: 600;
+    margin: 0;
+}
+
+article{
+    padding: 4% 4% 0 4%;
+    max-width: 800px;
+}
+
+h2{
+    border-bottom-color: #FFCB61;
+    border-bottom-style: solid;
+    border-bottom-width: 3px;
+}
+
+/*
+table{
+    border-color: black;
+    border-style: solid;
+    border-width: 2px;
+}
+
+td
+{
+        border-color: black;
+        border-style: solid;
+        border-width: 2px;
+}
+*/
+
+.text-col{
+    width: 50%;
+}
+
+
+.trench-units {
+    max-width: 100%;    
+}
+
+
+.trench-unit-map{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+}
+
+.footer-logo{
+    max-width: 200px;
+    display: inline-block;
+}
+
+.article-footer{
+    background-color: #DFDBCC;
+    font-size: x-small;
+    margin: 0;
+    padding: 1rem;
+}
+
+.usfw-disclaimer{
+    border-top: 2px solid #FFCB61;
+}
+
+.dvc-disclaimer{
+    border-top: 2px solid #FFCB61;
+    border-bottom: 2px solid #FFCB61;
+}
+
+.my-footer{
+    background-color: #184D7A;
+    color: #F2FcFF;
+    font-size: x-small;
+    margin: 0;
+    padding: 1rem;
+}
+
+/*------------------objects-------------------*/
+
+.objects-pic{
+    border-bottom: 8px solid #FFCB61;
+    border-left: 8px solid #FFCB61;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+.footer-table{
+    width: 100%;
+}
+
+.logo-col{
+    text-align: right;
+}
+
+.noaa-logo{
+    max-width: 300px;
+    margin: auto;
+}
+
+

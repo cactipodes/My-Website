@@ -1,0 +1,76 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Spartan:wght@500&display=swap');
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    background:#bbb url(../images/bg.jpg);
+}
+
+header {
+    background:#bbb url(../images/grass.jpg);
+}
+
+h1 {
+    font-family: 'Spartan', sans-serif;
+    margin: 0;
+    text-align: center;
+}
+
+.site-nav{
+    background: rgba(50, 50, 50, .6);
+}
+
+.site-nav li{
+    display: inline-block;
+    margin: 1rem;
+}
+
+.site-nav a{
+    color: white;
+}
+
+.bubba {
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto;
+}
+
+section {
+    padding: 1rem;
+}
+
+.services {
+    background: #ccc;
+    margin: 1rem;
+    border-radius: 2rem;
+}
+
+h2 {
+    text-align: center;
+}
+
+.services h2{
+    border-bottom: 1px #aaa solid;
+    padding-bottom: -.2rem;
+}
+
+.contact {
+    background-color: rgba(50, 50, 50, .7);
+    color: hsl(40, 50%, 50%); /*hue saturation and lightness*/
+}
+
+.contact p {
+    text-align: center;
+}
+
+.contact a {
+    color: hsl(40, 50%, 50%);
+}
+
+.site-footer{
+    background-color: hsla(50, 30%, 0%, .75);
+    padding: 1rem;
+    color: rgb(170, 150, 150)
+}

@@ -1,0 +1,208 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Corben&family=League+Spartan:wght@300;400&family=Montserrat:wght@300;400&display=swap');
+/**/
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+/*******************Article**********************/
+
+h2{
+    font-family: 'League Spartan', sans-serif;
+    text-align: center;
+    font-weight: 700;
+}
+
+.intro{
+    padding: 5%;
+}
+
+.intro p{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: small;
+    color: rgb(7, 70, 4);
+    text-align: left;
+}
+
+main{
+    background-image: url(images/bg.jpg);
+}
+
+.services{
+    margin: 1rem 1rem 2rem 1rem;
+    padding: 2rem 3rem;
+    background-color: rgba(173, 206, 184, 0.647);
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 3rem;
+    border-bottom-right-radius: 1rem;
+    box-shadow: 2px 2px 2px 0 rgba(14, 14, 14, 0.581)
+}
+
+.services h2{
+    padding-bottom: 5px;
+    border-bottom: 1px solid rgb(138, 138, 138);
+    margin-bottom: 1rem;
+}
+
+.services ul{
+    font-family: 'League Spartan', sans-serif;
+    color:rgb(7, 70, 4);
+}
+
+.services strong{
+    color: black;
+    font-weight: bold;
+}
+
+.services li{
+    margin-bottom: .25rem;
+}
+
+.intro img{
+    display: block;
+    margin: auto;
+    border: 3px solid rgb(249, 227, 128);
+    border-radius: 50%;
+    width: 18rem;
+    margin-top: -5rem;
+    margin-bottom: 2rem;
+}
+
+@media screen and (max-width: 700px){
+    .services strong{
+        display: block;
+    }
+
+    .intro img{
+        width: 12rem;
+        margin-top: -3rem;
+    }
+
+    .services li{
+        margin-top: 1rem;
+    }
+}
+
+@media screen and (min-width: 900px){
+    div{
+        padding: 0 5rem ;
+    }
+
+    .intro img{
+        margin-top: -5rem;
+    }
+}
+
+/*******************header**********************/
+
+header{
+    background-image: url(images/grass.jpg);
+    padding-bottom: 10%;
+}
+
+header h1{
+    font-family: 'Corben', cursive;
+    color: white;
+    margin: 0;
+    text-align: center;
+    background: rgba(14, 14, 14, 0.75);
+}
+
+header h2{
+    font-family: 'League Spartan', sans-serif;
+    color: rgb(172, 144, 33);
+    margin: 0;
+    text-align: center;
+    background: rgba(14, 14, 14, 0.75);
+    padding: 1rem;
+    font-size: medium;
+}
+
+@media screen and (max-width: 700px){
+    header h1{
+        font-size: 1.5rem;
+    }
+}
+
+/*******************nav**********************/
+
+nav{
+    background: rgba(14, 14, 14, 0.75);
+    padding: 1rem 0;
+}
+
+nav ul{
+    text-align: center;
+}
+
+nav li{
+    display: inline;
+    list-style: none;
+    padding: .15rem 1rem;
+}
+
+a{
+    font-family: 'League Spartan', sans-serif;
+    color: white;
+    padding: 3px 0;
+}
+
+a:hover{
+    color: rgb(172, 144, 33);
+}
+
+a:visited{
+    color: rgb(173, 206, 184);
+    border: none;
+}
+
+
+
+/*******************footer**********************/
+
+.contact{
+    background: rgba(30, 62, 16, 0.75);
+    padding: 2rem;
+    
+}
+
+.contact h2{
+    text-align: center;
+    color: rgb(249, 227, 128);
+    text-shadow: 0 3px 3px rgba(14, 14, 14, 0.848);
+}
+
+.contact p{
+    text-align: center;
+    padding: 1rem 0;
+}
+
+.contact a{
+    color: rgb(249, 227, 128);
+    font-size: medium;
+}
+
+.contact img{
+    padding: 0 1rem;
+}
+
+.contact .social{
+    padding: 0;
+}
+
+footer{
+    background-color: rgb(22, 49, 22);
+    padding: 1rem 0;
+    border: 2px;
+    border-color: black;
+}
+
+p{
+    color: rgb(249, 227, 128);
+    text-align: center;
+    font-size: x-small;
+}
