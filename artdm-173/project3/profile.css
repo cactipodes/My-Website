@@ -29,6 +29,14 @@ body{
     background-color: var(--drk-gry);
 }
 
+h2{
+    font-size: clamp(1.5rem, 0.5rem + 2vw, 2rem);
+}
+
+p{
+    font-size: clamp(1rem, 0.75rem + 1vw, 1.25rem);
+}
+
 /************************header*****************************/
 
 header{
@@ -201,6 +209,7 @@ footer p{
     margin: 1rem 2rem 0 2rem;
     padding: 3rem 0;
     border-top: 4px solid var(--lt-prpl);
+    font-size: clamp(0.75rem, 0.6rem + 0.5vw, .9rem);
 }
 
 @media screen and (max-width: 650px){
@@ -376,12 +385,26 @@ textarea{
     font-family: 'Kalam', cursive;
     letter-spacing: 2px;
     color: var(--creamy);
+    /*animation: about-title-gradient 3s ease 1s 1;*/
 }
 
-.about-me p, .sub-me h2{
+.about-me p{
     font-family: Cantarell;
     color: var(--creamy);
 }
+
+.sub-me h2{
+    font-family: Cantarell;
+    color: var(--creamy);
+    /*animation: about-title-gradient 3s ease 1s 1;*/
+}
+
+/*
+@keyframes about-title-gradient{
+    0% {color: #fff9f2;}
+    33% {color: #FFB068;}
+    100% {color: #fff9f2;}
+}*/
 
 @media screen and (max-width: 690px){
     .hero-image{
@@ -481,6 +504,10 @@ textarea{
     letter-spacing: 1px;
 }
 
+.musing-child h2{
+    padding: 1rem 0 2rem 0;
+}
+
 .musing-entry{
     display: grid;
     grid-template-columns: minmax(380px, 800px);
@@ -526,6 +553,9 @@ textarea{
     .m-1, .m-2, .m-4, .m-6{
         padding: 1rem;
     }
+    .musing-child h2{
+        padding: 0;
+    }
     .m-1{
         grid-row: 1 / 2;
         grid-column: 1 / 2;
@@ -543,7 +573,7 @@ textarea{
         grid-column: 1 / 2;
     }
     .m-5{
-        grid-row: 4 / 6;
+        grid-row: 4 / 7;
         grid-column: 2 / 3;
     }
     .m-6{
