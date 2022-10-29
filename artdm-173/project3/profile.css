@@ -37,6 +37,21 @@ p{
     font-size: clamp(1rem, 0.75rem + 1vw, 1.25rem);
 }
 
+h1{
+    color: var(--creamy);
+}
+
+h2, p{
+    font-family: Cantarell;
+    color: var(--creamy);
+}
+
+h3{
+    color: var(--creamy);
+    font-family: 'Kalam', cursive;
+    letter-spacing: 1.5px;
+}
+
 /************************header*****************************/
 
 header{
@@ -54,7 +69,6 @@ header{
 }
 
 header h1{
-    color: #fff9f2;
     font-family: Montserrat;
     padding: 2rem 0 2rem 3rem;
     font-size: clamp(2rem, .75rem + 3vw, 4rem);
@@ -388,16 +402,8 @@ textarea{
     /*animation: about-title-gradient 3s ease 1s 1;*/
 }
 
-.about-me p{
-    font-family: Cantarell;
-    color: var(--creamy);
-}
 
-.sub-me h2{
-    font-family: Cantarell;
-    color: var(--creamy);
-    /*animation: about-title-gradient 3s ease 1s 1;*/
-}
+
 
 /*
 @keyframes about-title-gradient{
@@ -437,18 +443,13 @@ textarea{
     grid-area: 1 / 1 / 4 / 2;/*there is overflow, this centers the image*/
 }
 
-.project-child p, .demo-child p{
-    font-family: 'Kalam', cursive;
-    letter-spacing: 1px;
-    font-weight: bold;
-    color: var(--lt-red);
+.project-child h3, .demo-child h3{
     grid-area: 2 / 1 / 3 / 2;
     opacity: 1;
+    transition-duration: .3s;
 }
 
 .project-title h2, .demo-title h2 {
-    font-family: Cantarell;
-    color: var(--creamy);
     text-align: center;
     padding: 2rem 0;
 }
@@ -477,7 +478,7 @@ textarea{
     opacity: 25%;
 }
 
-.project-child:hover p, .demo-child:hover p{
+.project-child:hover h3, .demo-child:hover h3{
     z-index: 1;
     opacity: 1;
 }
@@ -492,12 +493,11 @@ textarea{
                 15px 15px var(--prpl);
 }
 
-/**************************musings page***********************/
-
-.musing-child h2, .musing-child p{
-    font-family: Cantarell;
-    color: var(--creamy);
+.project-child:active h3, .demo-child:active h3{
+    color: var(--lt-red);
 }
+
+/**************************musings page***********************/
 
 .musing-child span{
     font-family: 'Kalam', cursive;
@@ -585,51 +585,63 @@ textarea{
 /***************************papers page******************/
 
 .papers-title{
-    font-family: Cantarell;
-    color: var(--creamy);
     text-align: center;
     padding: 2rem 0;
 }
 
 .papers-grid{
     display: grid;
-    grid-template-columns: minmax(300px, 450px) minmax(300px, 400px);
-    gap: 1.75rem;
+    grid-template-columns: minmax(200px, 450px) minmax(300px, 400px);
+    gap: 1rem;
     padding: 0 2rem 2rem 2rem;
     margin: auto;
     min-width: 380px;
     justify-content: center;
     align-items: center;
+    min-height: 300px;
 }
 
 .papers-grid h3{
-    font-family: Cantarell;
-    color: var(--creamy);
-    transition-duration: .5s;
+    transition-duration: .3s;
 }
 
+/*
 .papers-grid img{
     height: 100%;
     width: 100%;
     object-fit: contain;
     transition-duration: .5s;
-}
+}*/
 
 .paper-h3{
     grid-row: 1 / 2;
     grid-column: 1 / 2;
 }
 
+.paper-child{
+    grid-row: 1 / 2;
+    grid-column: 2 / 3;
+    aspect-ratio: 1 / 1;
+    transition: .3s;
+}
+
+.pg1-child{
+    background-image: url(images/papers-peacock-long.jpg);
+    background-position: center;
+    height: 100%;
+}
+
 .papers-grid span{
     font-style: italic;
 }
 
-.paper-image{/*gets rid of the tiny overflow of the grid for a 1 to 1 with img*/
+/*
+.paper-image{/*gets rid of the tiny overflow of the grid for a 1 to 1 with img
     display: flex;
-    
 }
 
 .paper-image{
+    z-index: -1;
     grid-row: 1 / 2;
     grid-column: 2 / 3;
     max-width: 400px;
@@ -652,24 +664,47 @@ textarea{
                 9px 9px var(--blu),
                 12px 12px var(--grn),
                 15px 15px var(--prpl);
-}
-
+}*/
 
 .papers-grid:active h3{
     color: var(--lt-blu);
     transform: translateY(6px);
 }
 
-@media screen and (max-width: 906px) {
+@media screen and (max-width: 690px) {
     .papers-grid{
         grid-template-columns: minmax(300px, 400px);
+        grid-template-rows: 100px, minmax(300px, 400px);
     }
     .papers-grid h3{
         grid-row: 1 / 2;
         grid-column: 1 / 2;
+        padding: 1rem;
     }
-    .papers-grid div{
-        grid-row: 1 / 2;
+    .paper-child{
+        grid-row: 2 / 3;
         grid-column: 1 / 2;
     }
 }
+
+.papers-grid:hover .paper-child{
+    border: 8px solid var(--creamy);
+    box-shadow: 3px 3px var(--lt-oj),
+                6px 6px var(--lt-red),
+                9px 9px var(--lt-blu),
+                12px 12px var(--lt-grn),
+                15px 15px var(--lt-prpl);
+}
+
+.papers-grid:active .paper-child{
+    transform: translateY(6px);
+    border: 8px solid var(--lt-blu);
+    box-shadow: 3px 3px var(--oj),
+                6px 6px var(--red),
+                9px 9px var(--blu),
+                12px 12px var(--grn),
+                15px 15px var(--prpl);
+}
+
+/**********************peacock ppr******************/
+
