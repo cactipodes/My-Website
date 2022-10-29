@@ -706,5 +706,44 @@ textarea{
                 15px 15px var(--prpl);
 }
 
-/**********************peacock ppr******************/
+/**********************peacock ppr*********************/
 
+.peacock-grid{
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    align-items: center;
+}
+
+.peacock-child{
+    padding: rem;
+    display: grid;
+    grid-template-columns: minmax(400px, 850px);
+    padding-bottom: 2rem;
+}
+
+/**first block**/
+.peacock-title{
+    align-items: center;
+    justify-content: center;
+}
+
+.peacock-title h2{
+    grid-row: 1 / 2;
+    grid-column: 1 / 2;
+    text-align: center;
+
+}
+
+.peacock-title img{
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    opacity: .6;
+
+    grid-row: 1 / 2;
+    grid-column: 1 / 2;
+}
+
+/**2nd block**/
