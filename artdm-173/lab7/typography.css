@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Bowlby+One+SC&family=Pontano+Sans&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0%;
+}
+
+body{
+    height: 100%;
+}
+
+h1{
+    font-family: 'Bowlby One SC', cursive;
+    font-weight: lighter;
+    letter-spacing: 1px;
+    line-height: 1.4;
+    font-size: clamp(1.2rem, .8rem + .65vw, 1.75rem);
+}
+
+p{
+    font-family: 'Pontano Sans', sans-serif;
+    font-weight: bold;
+    line-height: 1.35;
+    letter-spacing: 1px;
+    font-size: clamp(0.95rem, 0.625rem + 0.5vw, 1.12rem);
+}
+
+span{
+    font-family: 'Pontano Sans', sans-serif;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.horizontal-wrapper{
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    height: 100vh;
+    padding: 1rem 1rem 1rem 1.5rem;
+}
+
+.horizontal-wrapper .hw-child{
+    flex: 1;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 65vh 25vh;
+    min-width: 250px;
+    height: 100vh;
+}
+
+
+.hw-child .dimg1{
+    grid-row: 1 / 2;
+    grid-column: 1 / 2;
+}
+
+.hw-child .dimg2{
+    grid-row: 1 / 2;
+    grid-column: 2 / 3;
+}
+
+.dimg1, .dimg2{
+    margin: .5rem .5rem .5rem 0;
+}
+
+.hw-child .text-div{
+    grid-row: 2 / 3;
+    grid-column: 1 / 3;
+    padding: .75rem;
+}
+
+.image1{
+    background-image: url(images/back-flip.jpg);
+    background-position: right;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.image2{
+    background-image: url(images/red-skirt.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.image3{
+    background-image: url(images/strip-hat.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.image4{
+    background-image: url(images/orange-divider.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.image5{
+    background-image: url(images/red-coat.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.image6{
+    background-image: url(images/daisy-hair.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.image7{
+    background-image: url(images/popey-tee.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.image8{
+    background-image: url(images/graffiti-wall.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.image9{
+    background-image: url(images/peach-light.jpg);
+    background-position: right;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.image10{
+    background-image: url(images/orange-surf.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
