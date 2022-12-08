@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <title>Project 3 Reviews</title>
+</head>
+
+<body>
+
+<!--The header sometimes contains a photo, logo, tag line, or other importatnt info-->
+<header class="h5-image">
+    <figure class="logo">
+        <img src="images/logo1.png" alt="" width="100px">
+    </figure>
+    
+<!--------------This is my nav bar------------------------>    
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="reviews.html">Reviews</a></li>
+        </ul>
+    </nav>
+
+    <h1>Prickly Pear<br>Cactus Botanical</h1>
+</header>
+
+<!--------------All of my text that changes each page lives in the main tags ----------------------->
+<main>
+    <article >
+
+        <h2>Customer Reviews</h2>
+        <p>To leave a review, please fill out the form below.</p>
+
+<!------------------customer review form------------------------->
+    <section class="rev-page">
+        <section class="review-form">
+            <form>
+                <label for="title">Title:</label>
+                <input type="text" id="title" name="title" placeholder="I Love Cacti!" required>
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" name="name" placeholder="Sue Cuelent" required>
+                <label for="image">Your Image:</label>
+                <input type="file" id="image" name="image" accept=".png, .jpg, .jpeg" required>
+                <label>Your Rating (5 being the best):</label>
+            <div class="check-rating">
+                <label for="rating-1">1:</label>
+                <input type="radio" id="rating-1" name="rating" value="1"> <!--radio buttons need to have the same name to only select one at a time-->
+                <label for="rating-2">2:</label>
+                <input type="radio" id="rating-2" name="rating" value="2">
+                <label for="rating-3">3:</label>
+                <input type="radio" id="rating-3" name="rating" value="3">
+                <label for="rating-4">4:</label>
+                <input type="radio" id="rating-4" name="rating" value="4">
+                <label for="rating-5">5:</label>
+                <input type="radio" id="rating-5" name="rating" value="5">
+            </div>
+                <label>Comments:</label>
+                <textarea name="comments" rows="10" placeholder="Write your comments here."></textarea>
+                <button type="button">Submit</button>
+            </form>
+        </section>   
+
+    <!------------------------tables contain customer reviews--------------------------->
+        <section class="rev-table">
+            <table>
+                
+                <!--reveiw 1-->
+                    <tr class="see-row">
+                        <th>Image</th>
+                        <th >Review</th>
+                        <th class="rating">Rating</th>
+                    </tr>
+
+                    <tr>
+                        <td rowspan="3" class="see-row"><img src="images/rev-image-1.jpg" width=100%></td>
+                        <td class="title">Pokey!</td>
+                        <td rowspan="3" class="see-row rating">3</td>
+                    </tr>
+                    <tr>
+                        <td class="rev-text">It arrived in one piece but it's pokier than I thought it would be.</td>
+                    </tr>
+
+                    <tr>
+                        <td class="see-row">Sara Mitchell</td>
+                    </tr>
+
+                <!--reveiw 2-->
+                    <tr>
+                        <td rowspan="3" class="see-row"><img src="images/rev-image-2.jpg" width=100%></td>
+                        <td class="title">Low Maintenance</td>
+                        <td rowspan="3" class="see-row rating">5</td>
+                    </tr>
+
+                    <tr>
+                        <td class="rev-text">Just the kind of low maintenance plant I was looking for! I have a really busy schedule and I forget to water my plants. I always considered myself a black thumb, but now I have a plant I can keep alive!</td>
+                    </tr>
+
+                    <tr>
+                        <td class="see-row">Jason Hernandez</td>
+                    </tr>
+
+
+                <!--reveiw 3-->
+                    <tr>
+                        <td rowspan="3"><img src="images/rev-image-3.jpg" width=100%></td>
+                        <td class="title">A piece of the desert in my home</td>
+                        <td rowspan="3" class=" rating">4</td>
+                    </tr>
+
+                    <tr>
+                        <td class="rev-text">They’re so different from the leafy plants you find in nurseries, and they remind me home since I recently moved to the city. I liked them so much I bought more than one.</td>
+                    </tr>
+
+                    <tr>
+                        <td>Anonymous</td>
+                    </tr>
+        </table>
+        </section>
+    </section>
+
+    </article>
+</main>
+
+<!--------------Footer contains information about this class --------------------->
+<footer>
+    This is a class website for Aunyce Ocegueda.
+</footer>
+
+</body>
+</html>

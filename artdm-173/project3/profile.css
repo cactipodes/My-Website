@@ -625,21 +625,21 @@ textarea{
     transition: .3s;
 }
 
-.pg1-child{
-    background-image: url(images/papers-peacock.jpg);
-    background-position: center;
+.paper-child img{
     height: 100%;
+    width: 100%;
+    object-fit: contain;
 }
 
 .papers-grid span{
     font-style: italic;
 }
 
-/*
-.paper-image{/*gets rid of the tiny overflow of the grid for a 1 to 1 with img
+
+.pg1-child{/*gets rid of the tiny overflow of the grid for a 1 to 1 with img*/
     display: flex;
 }
-
+/*
 .paper-image{
     z-index: -1;
     grid-row: 1 / 2;
