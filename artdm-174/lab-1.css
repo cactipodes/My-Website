@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&family=Work+Sans&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.bg-box{
+    height: 100vh;
+    background-color: rgb(47, 23, 28);
+    background-image: url(lab-1/lab-images/lab1-bg.jpg);
+    background-blend-mode: screen;
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+    
+    height: 100vh;
+
+    display: flex;
+    align-items: center;
+}
+
+.content-box{
+    padding: 3rem;
+    border: 7px solid rgb(55, 29, 29);
+    margin: auto;
+    background-color: rgba(47, 23, 28, 0.7);
+}
+
+h1{
+    font-family: 'Work Sans', sans-serif;
+    color: white;
+    font-weight: bolder;
+}
+
+footer p{
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    font-size: small;
+    text-align: center;
+    font-weight: bold;
+}
+
+h2{
+    font-family: 'Work Sans', sans-serif;
+    color: white
+}
+
+h1, p{
+    position: relative;
+}
+
+main{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around; 
+    padding: 1rem 0 1rem 0;
+}
+
+ul{
+    padding-left: 15px;
+}
+
+li{
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+}
