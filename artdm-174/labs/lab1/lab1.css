@@ -6,7 +6,6 @@
 }
 
 .bg-box{
-    height: 100vh;
     background-image: url(lab1-images/bg-img2.jpg);
     background-size: cover;
     background-repeat: no-repeat;
@@ -126,11 +125,11 @@ footer p{
     }
 }
 
-@media screen and (min-width: 1000px){
+@media screen and (min-width: 980px){
     .bg-box{
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content: flex-start;
         max-width: 1500px;
     }
 
