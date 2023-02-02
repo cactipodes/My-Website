@@ -13,10 +13,17 @@ body{
     background-repeat: no-repeat;
 }
 
+section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+}
+
 h1{
     font-family: 'Allura', cursive;
     color: rgb(255, 243, 224);
-    font-size: clamp(3.5rem, 7vw, 6rem);
+    font-size: clamp(3rem, 2.5rem + 3vw, 5.5rem);
     font-weight: bold;
     margin: 1rem;
     text-shadow: 3px 2px 4px rgba(73, 2, 2, 0.702);
@@ -147,15 +154,17 @@ ul{
 
 /*****************flex and Media Query****************/
 
-@media screen and (min-width: 900px){
+@media screen and (min-width: 1080px){
     section{
-        display: flex;
+        flex-direction: row;
+        justify-content: baseline;
     }
 
     .grid1-container{
         position: relative;
         top: 10rem;
         left: 4rem;
+        max-width: 710px;
     }
 
     .grid-container{
