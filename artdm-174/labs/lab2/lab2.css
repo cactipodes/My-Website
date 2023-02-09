@@ -1,0 +1,285 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&family=Work+Sans&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+/********body**********/
+
+.bg-box{
+    background-image: url(lab2-images/bg-img2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    padding: 3rem;
+    margin: auto;
+}
+
+/*******main**********/
+
+main{
+    display: grid;
+    transition: .5s ease;
+}
+
+header, section{
+    padding-bottom: 3rem;
+}
+
+header, footer{
+    background-color: #987021;
+    padding: 3rem;
+    transition: .5s;
+}
+
+header, section, footer{
+    margin: .12rem;
+    border: 5px solid rgb(44, 33, 31);
+    animation: round-corners 2s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes round-corners {
+    0% {
+        border-radius: 0;
+    }
+
+    100% {
+        border-radius: 1.2rem;
+    }
+}
+
+.intro{
+    background-color: #ab591b;
+    padding: 2rem;
+}
+
+.projects{
+    background-color: #a22a52;
+    padding: 2rem;
+}
+
+.labs{
+    background-color: #6b4051;
+    padding: 2rem;
+}
+
+.other{
+    background-color: #2d9aab;
+    padding: 2rem;
+}
+
+
+
+/**********in section*********/
+
+h1{
+    font-family: 'Work Sans', sans-serif;
+    color: white;
+    font-weight: bolder;
+}
+
+header span{
+    color: #987021;
+    animation: color-change 6s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+}
+
+@keyframes color-change {
+	0% {
+        color: #987021;
+	}
+
+	16.66% {
+		color: #ba5e17;
+	}
+
+    33.32% {
+		color: #a22a52;
+	}
+
+    49.98% {
+		color: #6b4051;
+	}
+
+    83.3% {
+        color: #2d9aab;
+    }
+
+    100% {
+		color: #ffffff;
+	}
+}
+
+h2{
+    font-family: 'Work Sans', sans-serif;
+    color: white;
+    margin-bottom: 1rem;
+}
+
+p{
+    color: white;
+    font-family: 'Roboto', sans-serif;
+}
+
+ul{
+    padding-left: 0;
+    list-style: none;
+}
+
+.labs ul{
+    columns: 2;
+}
+
+li{
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.other ul li{
+    font-weight: 400;
+}
+
+a{
+    color: white;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+  }
+
+/********footer**********/
+
+footer p{
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    font-size: small;
+    text-align: center;
+    font-weight: bold;
+}
+
+/*********resize sections**********/
+
+main{
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+}
+
+/***hover***/
+
+main:has(.intro:hover){
+    grid-template-rows: 1.35fr 1fr 1fr 1fr;
+}
+
+main:has(.projects:hover){
+    grid-template-rows: 1fr 1.25fr 1fr 1fr;
+}
+
+main:has(.labs:hover){
+    grid-template-rows: 1fr 1fr 1.25fr 1fr;
+}
+
+main:has(.other:hover){
+    grid-template-rows: 1fr 1fr 1fr 1.25fr;
+}
+
+@media screen and (min-width: 650px){
+    main{
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+    }
+
+    .intro{
+        grid-row: 1 / 2;
+        grid-column: 1 / 4;
+    }
+
+    .projects{
+        grid-row: 2 / 3;
+        grid-column: 1 / 2;
+    }
+
+    .labs{
+        grid-row: 2 / 3;
+        grid-column: 2 / 3;
+        padding: 2rem;
+    }
+
+    .other{
+        grid-row: 3 / 4;
+        grid-column: 1 / 3;
+    }
+
+    /***hover***/
+
+    main:has(.intro:hover){
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1.25fr 1fr 1fr;
+    }
+    
+    main:has(.projects:hover){
+        grid-template-columns: 2fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+    }
+    
+    main:has(.labs:hover){
+        grid-template-columns: 1fr 2fr;
+        grid-template-rows: 1fr 1fr 1fr;
+    }
+    
+    main:has(.other:hover){
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1.25fr;
+    }
+}
+
+@media screen and (min-width: 980px){
+    .bg-box{
+        flex-direction: column;
+        justify-content: flex-start;
+        max-width: 1500px;
+    }
+
+    main{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .intro{
+        grid-row: 1 / 2;
+        grid-column: 1 / 3;
+    }
+
+    .other{
+        grid-row: 1 / 3;
+        grid-column: 3 / 4;
+    }
+
+    /***hover***/
+
+    main:has(.intro:hover){
+        grid-template-columns: 2fr 2fr 1fr;
+        grid-template-rows: 1.15fr 1fr;
+    }
+    
+    main:has(.projects:hover){
+        grid-template-columns: 2fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+    
+    main:has(.labs:hover){
+        grid-template-columns: 1fr 2fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+    
+    main:has(.other:hover){
+        grid-template-columns: 1fr 1fr 2fr;
+        grid-template-rows: 1.25fr 1fr;
+    }
+}
+
