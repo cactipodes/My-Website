@@ -16,7 +16,19 @@
     <h1>Lab 3</h1>
     
     <script >//(script)how to inject JS script
-        alert("hello");
+        //get user input
+        const age = prompt("How old are you?");
+        if (age > 21){
+            alert("You may pass");
+        }
+        else if (age == 21){
+            alert("You may pass");
+            document.body.style.backgroundColor = "red";
+        }
+        else{
+            alert("You may not enter");
+            window.location = "https://duckduckgo.com";
+        }
     </script>
 </body>
 </html>
