@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="lab4.css">
+    <title>Lab 4</title>
+</head>
+<body>
+    <h1>Click in the Box</h1>
+
+    <div class="demo-container1">
+        <div id="point"></div>
+    </div>
+
+    <div class="demo-container2">
+        <div id="dot" class="ball"></div>
+    </div>
+
+    <h1>Click in the Colored Squares</h1>
+
+    <div class="demo-container3">
+        <div class="button b1" onclick="color(this)"></div>
+        <div class="button b2" onclick="color(this)"></div>
+        <div class="button b3" onclick="color(this)"></div>
+        <div class="button b4" onclick="color(this)"></div>
+    </div>
+
+    <script>
+        const demoContainer = document.querySelector('.demo-container1');
+        const point = document.querySelector('#point');
+
+        demoContainer.addEventListener('mousedown', (e) => {
+            point.innerHTML = e.offsetX + ',' + e.offsetY;
+        });
+
+        const dot = document.querySelector('#dot');
+        const demoContainer2 = document.querySelector('.demo-container2');
+
+        demoContainer2.addEventListener('click', (e) => {
+            dot.style.transform = `translateY(${e.offsetY - 25}px)`;
+            dot.style.transform += `translateX(${e.offsetX - 25}px)`;
+            dot.style.opacity = 1;
+            //point.innerHTML = e.ctrlKey;
+        }, false);
+
+        const demoContainer3 = document.querySelector('.demo-container3');
+
+        function color(c){
+            let a = getComputedStyle(c);
+            let b = a.backgroundColor;
+            demoContainer3.style.backgroundColor = b;
+        }
+    </script>
+
+
+
+
+
+    
+</body>
+</html>
