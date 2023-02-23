@@ -33,6 +33,7 @@
 
         demoContainer.addEventListener('mousedown', (e) => {
             point.innerHTML = e.offsetX + ',' + e.offsetY;
+            console.log(e);
         });
 
         const dot = document.querySelector('#dot');
@@ -42,6 +43,7 @@
             dot.style.transform = `translateY(${e.offsetY - 25}px)`;
             dot.style.transform += `translateX(${e.offsetX - 25}px)`;
             dot.style.opacity = 1;
+            console.log(e);
             //point.innerHTML = e.ctrlKey;
         }, false);
 
@@ -51,6 +53,7 @@
             let a = getComputedStyle(c);
             let b = a.backgroundColor;
             demoContainer3.style.backgroundColor = b;
+            console.log(onclick="color(this)");
         }
     </script>
 
