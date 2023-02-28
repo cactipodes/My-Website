@@ -32,6 +32,7 @@
         /*to make spin*/
         .spin{
             rotate: 360deg;
+            border-radius: 50%;
         }
         
 /*******************slides********************/
@@ -135,29 +136,44 @@
                 container.innerHTML = "";
                 container.appendChild(boxes);
             }
+
+            boxes.addEventListener('click', makeBoxes);
         }
 
         //slides-------------------
-        const baseURL = 'http://aunyce.com/artdm-174/labs/lab4/images';
+        const baseURL = 'http://aunyce.com/artdm-174/labs/lab4/images/';
         const nxt = document.querySelector('.nxt');
         const prev = document.querySelector('.prev');
         const slide = document.querySelector('.pics');
         const reds = ['pic1.jpg', 'pic2.jpg', 'pic3.jpg', 'pic4.jpg', 'pic5.jpg', 'pic6.jpg'];
-        let index = 0;
+        let index = 1;
 
         nxt.onclick = function(e){
             e.preventDefault();
 
             slide.src = baseURL + reds[index];
-            index = index + 1;
+            index ++;
             console.log(index);
 
             if(index >= reds.length) {
                 index = 0;
             }
+            
         }
 
+        prev.onclick = function(e){
+            e.preventDefault();
 
+            slide.src = baseURL - reds[index];
+            index --;
+            console.log(index);
+
+            if(index === 1) {
+                index = 6;
+            }
+           
+            
+        }
     </script>
 </body>
 </html>
