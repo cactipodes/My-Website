@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 50px;
+            height: 50px;
+            border: 5px solid black;
+            transition: all 2s ease-out;
+        }
+        .move{
+            transform: translateX(300px);
+            background-color: blue;
+        }
+    </style>
+<!--
+    <script defer>//(script)how to inject JS script, (defer)plays script after body-doesnt work
+        alert("hello");
+    </script>
+-->
+</head>
+<body>
+    <h1>Lab 3</h1>
+
+    <button id="mybutton">Move box</button>
+    <div class="box">box</div>
+    
+
+
+    <script >//(script)how to inject JS script
+        //get user input
+        const age = prompt("How old are you?");
+        if (age > 21){
+            alert("You may pass");
+        }
+        else if (age == 21){
+            alert("You may pass");
+            document.body.style.backgroundColor = "red";
+        }
+        else{
+            alert("You may not enter");
+            window.location = "https://duckduckgo.com";
+        }
+
+        //reference button on document with reference get element id
+        const mybutton = document.getElementById("mybutton");
+
+        //create listener to detect button click, on mybutton click move box
+        mybutton.addEventListener("click", (e)=> { //event is pointing to the thing we want to happen
+            const box = document.querySelector(".box"); //. is for class, # is for id
+            box.classList.toggle("move"); //add transition to box div
+        });
+
+        const play = document.getElementById("play");
+
+            play.addEventListener("click", (e)=> {
+            const box = document.querySelector(".box"); //. is for class, # is for id
+
+            box.classList.toggle("move"); //add transition to box div
+        });
+    </script>
+</body>
+</html>
