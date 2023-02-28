@@ -6,37 +6,77 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lab 5 - CreateEelement</title>
     <style>
+        h1{
+            text-align: center;
+        }
+
         .container{
             border: 5px solid rgb(176, 16, 16);
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+            gap: 1rem;
             padding: 1rem;
         }
 
+        button{
+            margin-bottom: 1rem;
+        }
+
+        /*object to spin*/
         .box{
             padding: 2rem;
             border: 3px dashed rgb(236, 9, 9);
+            transition: all 2s;
+        }
+
+        /*to make spin*/
+        .spin{
+            rotate: 360deg;
+        }
+        
+/*******************slides********************/
+
+
+        .slides{
+            width: 400px;
+            margin: auto;
+        }
+
+        .slides figure {
+            margin:0;   
+        }
+
+        img{
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        .slides .nxt {
+            float:right;
         }
     </style>
 </head>
 
 <body>
-    <h1>Dynamically vreate create objects with Javascript</h1>
-    <button>Make boxes</button>
+    <h1>Dynamically create objects with Javascript</h1>
+    <button class="make-boxes" data-holder=".container">Make boxes</button>
     <div class="container"></div>
 
+    <h1>Slide Gallery</h1>
+    <div class="slides">
+        <figure><img class="pics" src="images/pic1.jpg" alt=""></figure>
+        <a class="prev" href="">previous</a>
+        <a class="nxt" href="">next</a>
+    </div>
+
     <script>
-        const button = document.querySelector('button');
-        const container = document.querySelector('.container');
+        const makeButton = document.querySelector('.make-boxes');
+        //const container = document.querySelector('.container');//auto generate boxes
 
         /*
-        button.addEventListener('click', (e) => {  //create one box at a time (vetically only)
-            const newBox = document.createElement('DIV'); //DIV all caps is a convention
-            newBox.classList.add('box');
-            container.appendChild(newBox); // can also use .append()
-        })
-        */
-
+        //auto generate boxes
         button.addEventListener('click', (e) => {  //create a lot of boxes
             for(let i = 0; i < 100; i++){
                 const newBox = document.createElement('DIV'); //DIV all caps is a convention
@@ -45,6 +85,79 @@
             }
             
         })
+        */
+        makeButton.addEventListener("click", renderBoxes);
+
+        //get input from user
+        function getNum() {
+            var numBoxes = Number(prompt("how many boxes?"));
+
+            if (numBoxes <= 0 || Number.isNaN(numBoxes)) {
+                return 0;
+            }
+            return numBoxes;
+        }
+
+        //Based on user input.
+        function makeBoxes() {
+            const numBoxes = getNum();
+            //We use tempHolder to build the boxes in memory only.
+            const tempHolder = document.createDocumentFragment();
+
+            for (let i = 1; i <= numBoxes; i++) {
+                let box = document.createElement("DIV");
+                //let txt = document.createTextNode(i);
+                box.className = "box";
+
+                //make spin
+                box.addEventListener('click', (e) => {
+                    e.target.classList.toggle('spin');
+                });
+
+                //box.appendChild(txt);
+                tempHolder.appendChild(box);
+            }
+
+            return tempHolder;
+        }
+
+        function renderBoxes(e) {
+            //get the data-holder attribute value from the button
+            const containerName = e.target.dataset.holder;
+            const container = document.querySelector(containerName);
+            const boxes = makeBoxes();
+
+            if (boxes.children.length === 0) {
+                container.innerHTML = "Try Again. Please type a positive whole number";
+            } 
+            else {
+                // clearout previous stuff before adding new boxes
+                container.innerHTML = "";
+                container.appendChild(boxes);
+            }
+        }
+
+        //slides-------------------
+        const baseURL = 'http://aunyce.com/artdm-174/labs/lab4/images';
+        const nxt = document.querySelector('.nxt');
+        const prev = document.querySelector('.prev');
+        const slide = document.querySelector('.pics');
+        const reds = ['pic1.jpg', 'pic2.jpg', 'pic3.jpg', 'pic4.jpg', 'pic5.jpg', 'pic6.jpg'];
+        let index = 0;
+
+        nxt.onclick = function(e){
+            e.preventDefault();
+
+            slide.src = baseURL + reds[index];
+            index = index + 1;
+            console.log(index);
+
+            if(index >= reds.length) {
+                index = 0;
+            }
+        }
+
+
     </script>
 </body>
 </html>
