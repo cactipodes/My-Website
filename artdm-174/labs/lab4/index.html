@@ -146,7 +146,7 @@
         const prev = document.querySelector('.prev');
         const slide = document.querySelector('.pics');
         const reds = ['pic1.jpg', 'pic2.jpg', 'pic3.jpg', 'pic4.jpg', 'pic5.jpg', 'pic6.jpg'];
-        let index = 1;
+        let index = 0;
 
         nxt.onclick = function(e){
             e.preventDefault();
@@ -164,15 +164,14 @@
         prev.onclick = function(e){
             e.preventDefault();
 
-            slide.src = baseURL - reds[index];
+            
+            slide.src = baseURL + reds[index - 1];
             index --;
             console.log(index);
 
-            if(index === 1) {
-                index = 6;
-            }
-           
-            
+            if(index === 0) {
+                index = 5;
+            }    
         }
     </script>
 </body>
